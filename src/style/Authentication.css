@@ -1,0 +1,40 @@
+.authentication {
+  margin-top: 36px;
+}
+
+.wall {
+  padding-top: 36px;
+  width: 240px;
+  margin: 12px auto;
+  box-shadow: 0 0 24px rgb(216, 216, 216);
+  padding: 30px
+}
+
+.field {
+  width: 100%;
+  margin-bottom: 6px;
+  background-color: rgb(240, 240, 240);
+  padding: 12px 12px 12px 12px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.field:focus {
+  outline: none
+}
+
+.wall button {
+  background-color: #8FBC8F; /* Green */
+  border: none;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.wall button:hover, button:focus {
+  background-color: #90EE90;
+  outline: none;
+}

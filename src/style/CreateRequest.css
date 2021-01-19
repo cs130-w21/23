@@ -1,0 +1,63 @@
+.createrequest {
+    flex: 0.35;
+    box-shadow: 0 0 24px rgb(216, 216, 216);
+    margin-right: 24px;
+}
+
+.content {
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    margin-right: 24px;
+    
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+li {
+    line-height: 2;
+}
+
+label { 
+    display: inline-block;
+    width: 40%;
+}
+
+input {
+    float: right;
+    background-color:  rgb(240, 240, 240);
+    width: 60%;
+    padding: 6px 6px 6px 6px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    border-radius: 2px; 
+}
+  
+input:focus {
+    outline: none
+}
+
+.content hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.content button {
+  background-color: #8FBC8F;/* Green */
+  border: none;
+  color: white;
+  padding: 12px 12px 12px 12px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.content button:hover, button:focus {
+    background-color: #90EE90;
+    outline: none;
+}

@@ -1,0 +1,22 @@
+.app__body {
+ 
+  height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.app__container {
+  margin-top: 48px;
+  min-width: 1050px;
+  height: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+}
+
+.App {
+  text-align: center;
+}
+
+
+
