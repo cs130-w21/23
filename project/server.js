@@ -1,7 +1,6 @@
 const mysql = require('mysql');
 const express = require('express')
 const session = require('express-session')
-const bodyParser = require('bodyParser')
 const path = require('path')
 const cors = require("cors")
 
@@ -12,10 +11,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }))
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
 app.use(cors())
-
 const connection = mysql.createConnection({
     host : "localhost",
     user : "root",

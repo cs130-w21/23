@@ -17,7 +17,17 @@ function SignUp() {
           <div className="wall">
             <input type="text" onChange={(event) => {setEmail(event.target.value)}} placeholder="Email" className="field" />
             <input type="password" onChange={(event) => {setPassword(event.target.value)}} placeholder="Password" className="field" />
-            <input type="text" onChange={(event) => {setCountry(event.target.value)}} placeholder="Country" className="field" />
+            <select onChange={(event) => { setCountry(event.target.value) }} placeholder="Country" className="field">
+              <option value="Australia"> Australia </option>
+              <option value="Canada"> Canada </option>
+              <option value="China"> China </option>
+              <option value="Germany"> Germany </option>
+              <option value="Japan"> Japan </option>
+              <option value="Switzerland"> Switzerland </option>
+              <option value="United Kingdom"> United Kingdom </option>
+              <option value="United States"> United States</option>
+              <option value="New Zealand"> New Zealand </option>
+            </select>
             <button onClick={register}>Sign Up</button>
           </div>
         </div>  
