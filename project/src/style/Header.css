@@ -1,0 +1,38 @@
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    color: black
+}
+
+.header__name {
+    margin-left: 48px;
+}
+
+.header__name a{
+    color: black;
+    text-decoration: None;
+    padding: 0 12px;
+}
+
+.header__name a:hover{
+    color: #90EE90;
+    text-decoration: None;
+    padding: 0 12px;
+}
+
+
+.header__items {
+    margin-right: 48px;
+}
+
+.header__items a{
+    color: black;
+    text-decoration: None;
+    padding: 0 12px;
+}
+
+.header__items a:hover{
+    color: #90EE90;
+}

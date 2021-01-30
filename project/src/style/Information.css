@@ -1,0 +1,19 @@
+.information {
+    flex: 0.65;
+}
+
+.about {
+    text-align: left;
+    padding-bottom: 12px;
+}
+
+.detail {
+    padding-top: 12px;
+    text-align: left;
+}
+
+.content hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
