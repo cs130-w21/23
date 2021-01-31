@@ -6,9 +6,10 @@ function SignUp() {
 
     const [emailRegister, setEmail] = useState("")
     const [passwordRegister, setPassword] = useState("")
-    const [countryRegister, setCountry] = useState("")
+    const [countryRegister, setCountry] = useState("Australia")
     const register = () => {
       Axios.post("http://localhost:3001/register", {email: emailRegister, password: passwordRegister, country: countryRegister}).then((response) => {
+        console.log("response")
         console.log(response)
       })
     }

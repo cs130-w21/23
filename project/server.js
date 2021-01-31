@@ -29,36 +29,51 @@ connection.connect((error) => {
     }
 })
 
-
-app.post('/try', (req,res) => {
-    var email = req.body.email
-    var password = req.body.password
-    if (email && password) {
-      connection.query('SELECT * FROM Users Where Email = ? AND Password = ?',
+app.post('/try', (req, res) => {
+  var email = req.body.email;
+  var password = req.body.password;
+  if (email && password) {
+    connection.query('SELECT * FROM Users Where Email = ? AND Password = ?',
       [email, password],
       (error, result) => {
         if (error) {
-          res.send({error: error})
+          res.send({ error: error });
         }
         if (result) {
-          request.session.loggedin = true
-          request.session.email = email
-          res.redirect('/')
+          request.session.loggedin = true;
+          request.session.email = email;
+          return res.redirect('/');
         }
-      })  
-    }  
+      })
+  }
 })
 
-app.post('/register',  (req,res) => {
-    const email = req.body.email
-    const password = req.body.password
-    const country = req.body.country
-    
-    connection.query("INSERT INTO Users (Email,Password,Country) VALUES (?,?,?)",
-    [email, password,country],
-    (error, result) => {
-        console.log(error)
-    })
+app.post('/register', (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+  const country = req.body.country;
+  if (email && password && country) {
+
+    connection.query('SELECT * FROM Users Where Email = ? AND Password = ?',
+      [email, password],
+      (error, result) => {
+        if (error)
+          res.send({ error: error });
+        if (!result) {
+          connection.query("INSERT INTO Users (Email,Password,Country) VALUES (?,?,?)",
+            [email, password, country],
+            (error, result) => {
+              if (error)
+                console.log(error);
+              else {
+                req.session.loggedin = true;
+                req.session.email = email;
+                res.redirect('/')
+              }
+            })
+        }
+      })
+  }
 })
 
 app.post('/create_account', (req,res) => {
